@@ -1,12 +1,12 @@
-import { useState } from 'react'
-
+import MyBidsPage from "./pages/SignInPage/SignInPage"
+import SignInPage from './pages/SignInPage/SignInPage';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      
+      <SignInPage />
     </>
   )
 }
