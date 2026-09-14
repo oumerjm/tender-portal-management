@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { api } from "../../api/client";
+import { useAuth } from "../../context/AuthContext";
 import "./SignInPage.css";
 import hijraLogo from "../../assets/Hijra_logo.png";
 
@@ -9,6 +12,10 @@ function SignInPage() {
     email: "",
     password: "",
   });
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -17,10 +24,25 @@ function SignInPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Execute email sign-up authentication logic
-    console.log("Submitting registration:", formData);
+    setError(null);
+    setLoading(true);
+
+    try {
+      const result = await api.register(
+        formData.email,
+        formData.password,
+        formData.fullName,
+        formData.companyName,
+      );
+      login(result);
+      navigate("/tenders");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleGoogleSignUp = () => {};
@@ -159,8 +181,10 @@ function SignInPage() {
               />
             </div>
 
-            <button type="submit" className="btn-submit">
-              Sign up
+            {error && <p className="error-message">{error}</p>}
+
+            <button type="submit" className="btn-submit" disabled={loading}>
+              {loading ? "Signing up..." : "Sign up"}
             </button>
           </form>
         </div>
