@@ -1,5 +1,4 @@
-import MyBidsPage from "./pages/SignInPage/SignInPage"
-import SignInPage from './pages/SignInPage/SignInPage';
+import SignInPage from './pages/SignInPage/SignInPage.jsx';
 
 function App() {
   

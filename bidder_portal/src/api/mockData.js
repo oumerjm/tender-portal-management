@@ -1,0 +1,32 @@
+export const MOCK_OPEN_TENDERS = [
+  {
+    id: 101,
+    title: "Supply and Delivery of Office Computing Equipment",
+    tenderType: "OPEN",
+    tenderCategory: "GOODS",
+    status: "OPEN",
+    requestingDepartment: "Information Technology Department",
+    closingDate: "2026-09-15T17:00:00",
+    nonRefundableFee: 2500,
+  },
+  {
+    id: 102,
+    title: "Renovation of Main Branch Customer Service Hall",
+    tenderType: "SELECTIVE_RESTRICTED",
+    tenderCategory: "WORKS",
+    status: "OPEN",
+    requestingDepartment: "Facilities and Administration Department",
+    closingDate: "2026-09-22T17:00:00",
+    nonRefundableFee: 5000,
+  },
+  {
+    id: 103,
+    title: "Managed Security Monitoring Services Contract",
+    tenderType: "NEGOTIATED",
+    tenderCategory: "SERVICES",
+    status: "OPEN",
+    requestingDepartment: "Risk and Compliance Department",
+    closingDate: "2026-09-30T17:00:00",
+    nonRefundableFee: 3500,
+  },
+];
