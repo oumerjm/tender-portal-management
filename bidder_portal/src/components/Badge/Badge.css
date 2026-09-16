@@ -1,0 +1,33 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.badge--open {
+  background-color: #d1fadf;
+  color: #027a48;
+}
+
+.badge--invitation,
+.badge--by-invitation {
+  background-color: #d1e9ff;
+  color: #175cd3;
+}
+
+.badge--negotiated {
+  background-color: #f2f4f7;
+  color: #344054;
+}
+
+.badge--default {
+  background-color: #f4f5f7;
+  color: #4b5563;
+  border: 1px solid #eaebef;
+}
