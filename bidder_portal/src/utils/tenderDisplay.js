@@ -1,0 +1,17 @@
+export const TENDER_TYPE_DISPLAY = {
+  OPEN: { variant: "open", label: "Open" },
+  SELECTIVE_RESTRICTED: { variant: "invitation", label: "By Invitation" },
+  NEGOTIATED: { variant: "negotiated", label: "Negotiated" },
+};
+
+export function formatCurrency(amount) {
+  return `ETB ${amount.toLocaleString()}`;
+}
+
+export function formatDate(isoString) {
+  return new Date(isoString).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
