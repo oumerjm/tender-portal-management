@@ -1,0 +1,10 @@
+.dashboard-page { display: grid; gap: 24px; padding-bottom: 8px; }
+.dashboard-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.dashboard-stats .stat-card { min-height: 112px; border-radius: 12px; padding: 20px; }
+.dashboard-stats .stat-card-title { color: #526077; font-size: 12px; }
+.dashboard-stats .stat-card-value { margin-top: 3px; font-size: 28px; }
+.dashboard-stats .stat-card-subtext { color: #91a0b5; font-size: 10px; }
+.dashboard-stats .stat-card-icon { border-radius: 50%; color: #0c205c; font-size: 16px; font-weight: 700; }
+.dashboard-page .tender-table-card { border-radius: 12px; padding: 22px; }
+.dashboard-loading { color: #627087; font-size: 14px; }
+@media (max-width: 800px) { .dashboard-stats { grid-template-columns: 1fr; } }
