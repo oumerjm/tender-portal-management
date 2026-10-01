@@ -31,3 +31,13 @@
   color: #4b5563;
   border: 1px solid #eaebef;
 }
+
+.badge--in-progress { background-color: #fef3c7; color: #92400e; }
+.badge--submitted { background-color: #d1e9ff; color: #175cd3; }
+.badge--under-evaluation { background-color: #ede9fe; color: #6d28d9; }
+.badge--awarded { background-color: #d1fadf; color: #027a48; }
+.badge--rejected { background-color: #fee4e2; color: #b42318; }
+.badge--withdrawn { background-color: #f2f4f7; color: #667085; }
+.badge--goods { background-color: #dbeafe; color: #1e40af; }
+.badge--services { background-color: #ede9fe; color: #6d28d9; }
+.badge--works { background-color: #ffedd5; color: #c2410c; }
