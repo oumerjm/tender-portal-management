@@ -4,6 +4,12 @@ export const TENDER_TYPE_DISPLAY = {
   NEGOTIATED: { variant: "negotiated", label: "Negotiated" },
 };
 
+export const TENDER_CATEGORY_DISPLAY = {
+  GOODS: { variant: "goods", label: "Goods" },
+  SERVICES: { variant: "services", label: "Services" },
+  WORKS: { variant: "works", label: "Works" },
+};
+
 export function formatCurrency(amount) {
   return `ETB ${amount.toLocaleString()}`;
 }
