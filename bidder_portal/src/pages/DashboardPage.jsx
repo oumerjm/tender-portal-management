@@ -39,7 +39,7 @@ export default function DashboardPage() {
         <StatCard title="Closing Soon" value={5} subtext="Expiring within the next 7 working days" icon={<AlarmClockPlus />} iconBg="#fff0c7" />
         <StatCard title="My Active Bids" value={3} subtext="Tenders you have submitted bids to" icon={<LayoutDashboard />} iconBg="#e7ecff" />
       </div>
-      <TenderTable tenders={tenders} onSeeMore={handleSeeMore} />
+      <div className="dashboard-tenders-preview"><TenderTable tenders={tenders.slice(0, 5)} onSeeMore={handleSeeMore} actionLink={{ to: "/tenders", label: "View All Tenders \u2192" }} /></div>
       {selectedTender && (
         <TenderDetailModal tender={selectedTender} onClose={handleCloseModal} />
       )}
