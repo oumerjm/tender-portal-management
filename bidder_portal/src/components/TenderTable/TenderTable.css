@@ -12,7 +12,22 @@
   font-size: 18px;
   font-weight: 700;
   color: #111827;
+  margin: 0;
+}
+
+.tender-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
+  gap: 16px;
+}
+.tender-table-action {
+  color: #0c205c;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 /* Search Bar Styling */

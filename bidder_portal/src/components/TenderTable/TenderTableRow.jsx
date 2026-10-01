@@ -1,13 +1,13 @@
 import React from "react";
 import Badge from "../Badge/Badge";
 import {
-  TENDER_TYPE_DISPLAY,
+  TENDER_CATEGORY_DISPLAY,
   formatCurrency,
   formatDate,
 } from "../../utils/tenderDisplay";
 
 export default function TenderTableRow({ tender, onSeeMore }) {
-  const { variant, label } = TENDER_TYPE_DISPLAY[tender.tenderType];
+  const { variant, label } = TENDER_CATEGORY_DISPLAY[tender.tenderCategory];
 
   return (
     <tr className="tender-row">
